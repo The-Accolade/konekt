@@ -2,7 +2,8 @@ import React from 'react';
 import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbDownAlt';
 import DeleteIcon from '@material-ui/icons/Delete';
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import EditIcon from '@material-ui/icons/Edit';
+// import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
 import useStyles from './styles.js';
 
@@ -17,7 +18,8 @@ const classes = useStyles();
       </div>
       <div className={classes.overlay2}>
         <Button style={{color: 'white'}} size='small' onClick={() => {}}>
-          <MoreHorizIcon fontSize='medium' />
+          {/* <MoreHorizIcon fontSize='medium' /> */}
+          <EditIcon fontSize='medium' />
         </Button>
       </div>
       <div className={classes.details}>
