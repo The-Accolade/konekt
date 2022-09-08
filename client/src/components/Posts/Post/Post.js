@@ -7,7 +7,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import moment from 'moment';
 import useStyles from './styles.js';
 
-function Post({ post }) {
+function Post({ post, setCurrentId }) {
 const classes = useStyles();
   return (
     <Card className={classes.card}>
@@ -17,8 +17,11 @@ const classes = useStyles();
         <Typography variant='body2'>{moment(post.createdAt).fromNow()}</Typography>
       </div>
       <div className={classes.overlay2}>
-        <Button style={{color: 'white'}} size='small' onClick={() => {}}>
-          {/* <MoreHorizIcon fontSize='medium' /> */}
+        <Button 
+            style={{color: 'white'}} 
+            size='small' 
+            onClick={() => setCurrentId(post._id)}>
+            {/* <MoreHorizIcon fontSize='medium' /> */}
           <EditIcon fontSize='medium' />
         </Button>
       </div>
